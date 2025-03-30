@@ -59,7 +59,7 @@ app.post('/api/notes/',(request,response)=>{
     notes=notes.concat(note)
     response.json(note)
 })
-const PORT=3002
+const PORT=process.env.PORT || 3002
 app.listen(PORT,()=>{
     console.log(`Server succesfully started a PORT ${PORT}`)
 })
