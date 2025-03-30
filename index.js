@@ -24,9 +24,7 @@ app.get('/api/notes',(request,response)=>{
     response.json(notes)
 })
 
-app.get('/',(request,response)=>{
-    response.send('<h1>Helloword!!<h1>')
-})
+
 app.get('/api/notes/:id',(request,response)=>{
   const id=Number(request.params.id)
   const note=notes.find(not=>not.id === id)
